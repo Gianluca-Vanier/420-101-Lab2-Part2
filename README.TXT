@@ -16,4 +16,9 @@ How to start this project: Create one or more TicketMachine objects.
 QUESTIONS:
 
 48. It now allows you to insert 0 dollars.
-49. 
+50. The boolean was used to make the circle visible or invisible. Although it was suited,
+a int could have been used to change the transparency.
+52. Removing the else statement makes so that if the if statement is not activated, nothing will happen.
+53. If you change your code so that the balance is subtracted by the amount and added with, then yes, you can get a negative number in balance.
+
+

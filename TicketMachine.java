@@ -17,6 +17,14 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    
+    private int discount;
+    
+    private int saving;
+    
+    private int count;
+    
+    private int mean;
 
     /**
      * Create a machine that issues tickets of the given price.
@@ -26,8 +34,12 @@ public class TicketMachine
         price = cost;
         balance = 0;
         total = 0;
+        discount = 0;
+        saving = price * discount;
+        count = 1;
+        mean = total / count;
     }
-
+    
     /**
      * @Return The price of a ticket.
      */
@@ -95,5 +107,15 @@ public class TicketMachine
         amountToRefund = balance;
         balance = 0;
         return amountToRefund;
+    }
+    
+    public void affordable(int budget)
+    {
+        if(budget < price) {
+            System.out.println("Too expensive!");
+        }
+        else {
+            System.out.println("Just right.");
+        }
     }
 }
