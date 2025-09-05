@@ -116,4 +116,29 @@ public class TicketMachine
         total = 0;
         return amountToReturn;
     }
+    
+    public void printTicketWithDiscount(int discount)
+    {
+        price = (price * discount) / 100;
+        int amountLeftToPay;
+        amountLeftToPay = price - balance;
+        if(amountLeftToPay <= 0) {
+            // Simulate the printing of a ticket.
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("# Ticket");
+            System.out.println("# " + price + " cents.");
+            System.out.println("##################");
+            System.out.println();
+
+            // Update the total collected with the price.
+            total = total + price;
+            // Reduce the balance by the price.
+            balance = balance - price;
+        }
+        else {
+            System.out.printf("You must insert at least %d more cents.%n",
+                              price - balance);
+        }
+    }
 }
