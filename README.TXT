@@ -20,5 +20,11 @@ QUESTIONS:
 a int could have been used to change the transparency.
 52. Removing the else statement makes so that if the if statement is not activated, nothing will happen.
 53. If you change your code so that the balance is subtracted by the amount and added with, then yes, you can get a negative number in balance.
+55. saving = price * discount
+56. mean = total / count
+59. This code is meant to return the value of the balance field, not change it.
+60. There is an error because the purpose of a return statement is to stop the exection of a method or program.
+61. The price field has int in front of it. Yes it still compiles. It does not add the new value of price to the price field.
+
 
 
