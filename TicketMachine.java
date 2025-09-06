@@ -119,7 +119,9 @@ public class TicketMachine
     
     public void printTicketWithDiscount(int discount)
     {
-        price = (price * discount) / 100;
+        int originalPrice;
+        originalPrice = price;
+        price = price - ((price * discount) / 100);
         int amountLeftToPay;
         amountLeftToPay = price - balance;
         if(amountLeftToPay <= 0) {
@@ -140,5 +142,6 @@ public class TicketMachine
             System.out.printf("You must insert at least %d more cents.%n",
                               price - balance);
         }
+        price = originalPrice;
     }
 }
